@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+}
+
+nav,
+.header-list {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-list {
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+
+  .header-list-item {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+
+}
