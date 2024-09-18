@@ -1,24 +1,49 @@
+h1 {
+  font-weight: 400;
+  font-size: 5rem;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+li {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+code {
+  font-weight: 300;
+  font-size: 0.5rem;
+}
+
 .Secret-Morse-Encoder {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   height: fit-content;
   width: 100%;
-  /* background-color: green; */
 
-  h1 {
-    font-weight: 400;
-    font-size: 5rem;
+  .Morse-Encoder-Intro {
+    width: 75%;
+    text-align: center;
+    margin: 0 2rem 0 2rem;
   }
 
-  .Morse-Encoder-Content {
+  .Morse-Encoder-Parts-Content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
     margin: 0 2rem 0 2rem;
+    gap: 1rem;
 
     .parts-needed {
       display: flex;
@@ -26,21 +51,32 @@
       justify-content: center;
       align-items: flex-start;
       width: 50%;
-
-      h2 {
-        margin-left: 2rem;
-        font-weight: 300;
-        font-size: 2.5rem;
-      }
-
-      li {
-        font-weight: 300;
-        font-size: 1.5rem;
-      }
+      border: 1px lightgray;
+      border-radius: 1rem;
+      box-shadow: 0 0 3px 0 lightgray;
     }
 
     .parts-needed-picture {
       width: 50%;
+      img {
+        border-radius: 1rem;
+        box-shadow: 0 0 3px 0 lightgray;
+      }
+    }
+  }
+
+  .Powering-Components {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 0 2rem 0 2rem;
+
+    .Powering-Components-Steps {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
     }
   }
 }

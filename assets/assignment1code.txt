@@ -1,0 +1,108 @@
+/*
+https://arduinogetstarted.com/tutorials/arduino-rotary-encoder
+*/
+
+#include <ezButton.h>
+#include <stdio.h>
+#include "MorseEncoder.h"
+
+#define DIRECTION_CW 0   // clockwise
+#define DIRECTION_CCW 1  // counter-clockwise
+
+const uint8_t CLK_PIN = PIN6;
+const uint8_t DT_PIN = PIN7;
+const uint8_t SW_PIN = 8;  // Digital Pin 8
+const uint8_t NORMAL_BUTTON_PIN = PIN2;
+const uint8_t BLUE_LED_PIN = PIN3;
+const uint8_t JOYSTICK_Y = A0;
+
+// Array of characters: A-Z and punctuation marks
+const char characters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,!? ";
+const uint32_t characters_len = sizeof(characters);
+
+uint32_t counter = 0;
+uint8_t direction = DIRECTION_CW;
+uint8_t CLK_state;
+uint8_t prev_CLK_state;
+String computed_string = "";
+ezButton rot_button(SW_PIN);
+ezButton normal_button(NORMAL_BUTTON_PIN);
+MorseEncoder morseLightB(BLUE_LED_PIN);
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(CLK_PIN, INPUT);
+  pinMode(DT_PIN, INPUT);
+  pinMode(NORMAL_BUTTON_PIN, INPUT_PULLUP);
+  pinMode(BLUE_LED_PIN, OUTPUT);
+
+  morseLightB.beginLight(5);
+  rot_button.setDebounceTime(100);
+  normal_button.setDebounceTime(50);
+  prev_CLK_state = digitalRead(CLK_PIN);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  rot_button.loop();
+  handleRot();
+
+  normal_button.loop();
+  handleNormalButton();
+}
+
+void handleNormalButton() {
+  const int read_y = analogRead(JOYSTICK_Y);
+  if ((read_y >= 0 && read_y <= 500) || (read_y >= 600)) {
+    morseLightB.println(computed_string);
+    computed_string = "";
+  }
+  if (normal_button.isPressed()) {
+    morseLightB.println(computed_string);
+    computed_string = "";
+  }
+}
+
+void handleRot() {
+  // read the current state of the rotary encoder's CLK pin
+  CLK_state = digitalRead(CLK_PIN);
+
+  // If the state of CLK is changed, then pulse occurred
+  // React to only the rising edge (from LOW to HIGH) to avoid double count
+  if (CLK_state != prev_CLK_state && CLK_state == HIGH) {
+    if (digitalRead(DT_PIN) == HIGH) {
+      direction = DIRECTION_CW;
+      counter = incrementCounter(counter);
+    } else {
+      direction = DIRECTION_CCW;
+      counter = decrementCounter(counter);
+    }
+
+    const char current_char = translateCounter(counter);
+    printToSerial("Current Char: " + String(current_char));
+  }
+  // save last CLK state
+  prev_CLK_state = CLK_state;
+
+  if (rot_button.isPressed()) {
+    const char current_char = translateCounter(counter);
+    computed_string.concat(current_char);
+    printToSerial("Computed String: " + String(computed_string));
+  }
+}
+
+uint32_t incrementCounter(uint32_t current_counter) {
+  return current_counter == characters_len - 1 ? 0 : current_counter + 1;
+}
+
+uint32_t decrementCounter(uint32_t current_counter) {
+  return current_counter == 0 ? characters_len - 1 : current_counter - 1;
+}
+
+// map the counter value to this array of chars
+char translateCounter(uint32_t value) {
+  return characters[value % (characters_len - 1)];
+}
+
+void printToSerial(String str) {
+  Serial.println(str + "\r\n");
+}
