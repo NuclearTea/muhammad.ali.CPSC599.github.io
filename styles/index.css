@@ -29,9 +29,9 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  height: 50rem;
+  height: fit-content;
   width: 100%;
-  /* background-color: green; */
+  /* height: 100rem; */
 
   .landing-page-content-title {
     margin-left: 5rem;
@@ -40,12 +40,15 @@ nav {
     justify-content: center;
     align-items: center;
     width: 50%;
-    /* height: 50%; */
-    /* gap: 1rem; */
-    /* background-color: red; */
 
     h1 {
-      font-size: 3rem;
+      font-weight: 400;
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 2.5rem;
     }
   }
 
@@ -55,5 +58,53 @@ nav {
     justify-content: center;
     align-items: center;
     width: 50%;
+  }
+}
+
+.Secret-Morse-Encoder-Description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: black;
+    border: 1px lightgray;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 3px 0 lightgray;
+    padding: 0 1rem 0 1rem;
+    h1 {
+      font-weight: 400;
+      font-size: 5rem;
+    }
+    &:hover {
+      background-color: lightgrey;
+      transition: 0.5s;
+    }
+  }
+  .lines {
+    font-weight: 300;
+    font-size: 2.5rem;
+    opacity: 0; /* Initially hidden */ /* From ChatGPT */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */ /* From ChatGPT */
+
+    /* From ChatGPT */
+    &.fade-in {
+      opacity: 1; /* Fully visible */
+    }
+  }
+  .more-details {
+    margin-left: 70%;
+    opacity: 0; /* Initially hidden */ /* From ChatGPT */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */ /* From ChatGPT */
+
+    /* From ChatGPT */
+    &.fade-in {
+      opacity: 1; /* Fully visible */
+    }
   }
 }

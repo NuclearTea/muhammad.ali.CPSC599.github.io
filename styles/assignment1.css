@@ -1,0 +1,43 @@
+.Secret-Morse-Encoder {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  /* background-color: green; */
+
+  h1 {
+    font-weight: 400;
+    font-size: 5rem;
+  }
+
+  .Morse-Encoder-Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+
+    .parts-needed {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 2rem;
+      /* background-color: red; */
+      width: 50%;
+
+      h2 {
+        margin-left: 2rem;
+        font-weight: 300;
+        font-size: 2.5rem;
+      }
+
+      li {
+        font-weight: 300;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
