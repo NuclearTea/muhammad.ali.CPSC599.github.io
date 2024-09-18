@@ -1,89 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>CPSC 599 Course Work</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/index.css" />
-  <link rel="stylesheet" href="styles/global.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <title>CPSC 599 Course Work</title>
-</head>
+  <body>
+    <nav id="navigation">
+      <h1>Muhammad Ali</h1>
+      <div>
+        <ul class="header-list">
+          <li>
+            <a class="header-list-item" rel="noopener noreferrer" href="#">
+              About
+            </a>
+          </li>
 
-<body>
-  <nav id="navigation">
-    <h1>Muhammad Ali</h1>
-    <div>
-      <ul class="header-list">
-        <li>
-          <a class="header-list-item" rel="noopener noreferrer" href="#">
-            About
-          </a>
-        <li>
-          <a class="header-list-item" rel="noopener noreferrer" href="#Morse-Encoder">
-            Secret Morse Encoder
-          </a>
-        </li>
-        <li>
-          <a class="header-list-item" rel="noopener noreferrer" href="Assignment2.html">
-            Assignment 2
-          </a>
-        </li>
-        <li>
-          <a class="header-list-item" rel="noopener noreferrer" href="Assignment3.html">Assignment 3</a>
-        </li>
-      </ul>
+          <li>
+            <a
+              class="header-list-item"
+              rel="noopener noreferrer"
+              href="#Morse-Encoder"
+            >
+              Secret Morse Encoder
+            </a>
+          </li>
+          <li>
+            <a
+              class="header-list-item"
+              rel="noopener noreferrer"
+              href="Assignment2.html"
+            >
+              Assignment 2
+            </a>
+          </li>
+          <li>
+            <a
+              class="header-list-item"
+              rel="noopener noreferrer"
+              href="Assignment3.html"
+              >Assignment 3</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="#" class="landing-page-content-container">
+      <div class="landing-page-content-title">
+        <h1>Welcome To My CPSC 599 Physical & Tangible HCI Portfolio</h1>
+        <h2>
+          Here, you will see descriptions of my project. Feel free to click for
+          more details
+        </h2>
+      </div>
+      <div class="landing-page-content-description">
+        <img
+          src="assets/landing-page.svg"
+          width="100%"
+          height="100%"
+          alt="Representation of Class"
+        />
+      </div>
     </div>
-  </nav>
-  <div id="#" class="landing-page-content-container">
-    <div class="landing-page-content-title">
-      <h1>Welcome To My CPSC 599 Physical & Tangible HCI Portfolio</h1>
-      <h2>Here, you will see descriptions of my project. Feel free to click for more details</h2>
-    </div>
-    <div class="landing-page-content-description">
-      <img src="assets/landing-page.svg" width="100%" height="100%" alt="Representation of Class" />
-    </div>
-  </div>
-  <div class="Secret-Morse-Encoder-Description" id="Morse-Encoder">
+    <div class="Secret-Morse-Encoder-Description" id="Morse-Encoder">
+      <a href="Assignment1.html" rel="noopener noreferrer" target="_blank">
+        <h1>Secret Morse Encoder</h1>
+      </a>
+      <h3 class="lines">
+        Imagine, you are undercover, and need to transmit a message clearly but
+        you need to do it secretly.
+      </h3>
+      <h3 class="lines">
+        There isn't much time and your message has to be specific but not
+        obvious, as to attract attention or immediatly be intercepted.
+      </h3>
+      <h3 class="lines">
+        You are behind enemy lines, disgused as them, integrated with them,
+        friends with them, love some of them.
+      </h3>
+      <h3 class="lines">
+        You have to disguise what you are commnicating, and how you are
+        transmitting this.
+      </h3>
+      <a
+        class="more-details"
+        href="Assignment1.html"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h3>Click For More Details</h3>
+      </a>
 
-    <a href="Assignment1.html" rel="noopener noreferrer" target="_blank">
-      <h1>Secret Morse Encoder</h1>
-    </a>
-    <h3 class="lines">Imagine, you are undercover, and need to transmit a message clearly but you need to do it
-      secretly.</h3>
-    <h3 class="lines">There isn't much time and your message has to be specific but not obvious, as to attract attention
-      or immediatly
-      be intercepted.</h3>
-    <h3 class="lines">You are behind enemy lines, disgused as them, integrated with them, friends with them, love some
-      of them.</h3>
-    <h3 class="lines">You have to disguise what you are commnicating, and how you are transmitting this.</h3>
-    <a class="more-details" href="Assignment1.html" rel="noopener noreferrer" target="_blank">
-      <h3>Click For More Details</h3>
+      <script>
+        /// The following code is for the fade in animation, it
+        /// is generated from ChatGPT
 
-    </a>
-
-    <script>
-      /// The following code is for the fade in animation, it 
-      /// is generated from ChatGPT
-
-      // Create a new IntersectionObserver instance
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in"); // Add fade-in class when in view
-          }
+        // Create a new IntersectionObserver instance
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in"); // Add fade-in class when in view
+            }
+          });
         });
-      });
 
-      // Select all elements with the class "fade"
-      const fadeElements = [...document.querySelectorAll('.lines'), ...document.querySelectorAll('.more-details')];
+        // Select all elements with the class "fade"
+        const fadeElements = [
+          ...document.querySelectorAll(".lines"),
+          ...document.querySelectorAll(".more-details"),
+        ];
 
-      // Attach the observer to each "fade" element
-      fadeElements.forEach(el => observer.observe(el));
-
-    </script>
-
-  </div>
-</body>
-
+        // Attach the observer to each "fade" element
+        fadeElements.forEach((el) => observer.observe(el));
+      </script>
+    </div>
+  </body>
 </html>

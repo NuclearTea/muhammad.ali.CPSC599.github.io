@@ -14,18 +14,17 @@
 
   .Morse-Encoder-Content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+    margin: 0 2rem 0 2rem;
 
     .parts-needed {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      margin-left: 2rem;
-      /* background-color: red; */
       width: 50%;
 
       h2 {
@@ -38,6 +37,10 @@
         font-weight: 300;
         font-size: 1.5rem;
       }
+    }
+
+    .parts-needed-picture {
+      width: 50%;
     }
   }
 }
