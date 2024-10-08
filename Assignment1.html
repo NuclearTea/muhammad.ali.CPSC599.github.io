@@ -5,11 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/assignment1.css" />
     <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
     <title>Assignment 1 Info</title>
   </head>
 
   <body>
-    <div class="Secret-Morse-Encoder" id="Morse-Encoder">
+    <nav id="navigation">
+      <a
+      href="index.html"
+      >
+        <h1>Muhammad Ali</h1>
+      </a>
+      <div>
+        <ul class="header-list">
+          <li>
+            <a class="header-list-item" href="#">
+              Intro
+            </a>
+          </li>
+          <li>
+            <a
+              class="header-list-item"
+              href="#Parts-Needed"
+            >
+              Parts Needed
+            </a>
+          </li>
+          <li>
+            <a
+              class="header-list-item"
+              href="#Powering-Components"
+              >Powering Components</a
+            >
+          </li>
+          <li>
+            <a
+              class="header-list-item"
+              href="#Video-Example"
+              >Video Example</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="Secret-Morse-Encoder">
       <h1>Secret Morse Encoder</h1>
       <div class="Morse-Encoder-Intro">
         <h2>
@@ -18,10 +57,9 @@
           into flashing lights in Morse.
         </h2>
       </div>
-
-      <div class="Morse-Encoder-Parts-Content">
-        <div class="parts-needed">
-          <h2>What you will need:</h2>
+      <div class="Morse-Encoder-Parts-Content" id="Parts-Needed" >
+        <div class="parts-needed" >
+          <h2 >What you will need:</h2>
           <ul>
             <li>A computer</li>
             <li>Arduino or other microcontroller, I use an Arduino Leonardo</li>
@@ -49,7 +87,7 @@
           />
         </div>
       </div>
-      <h2>Steps to Powering Components</h2>
+      <h2 id="Powering-Components">Steps to Powering Components</h2>
       <div class="Powering-Components">
         <div class="Powering-Components-Steps">
           <ol>
@@ -159,7 +197,7 @@
       </div>
       <h2>Circuit Schematic</h2>
       <img src="assets/CircuitSchematicA1.jpg" alt="Circuit Schematic" width="50%" height="100%"></img>
-      <h2>Video Example</h2>
+      <h2 id="Video-Example">Video Example</h2>
       <iframe
       width="560"
       height="315"

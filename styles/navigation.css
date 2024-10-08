@@ -1,0 +1,30 @@
+nav,
+.header-list {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+}
+
+.header-list {
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+
+  .header-list-item {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+}
