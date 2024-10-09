@@ -1,14 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/assignment2.css" />
+    <title>Assignment 2: Lightsabre Piano</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 2 Info</title>
-</head>
+  <body>
+    <nav id="navigation">
+      <a href="index.html">
+        <h1>Muhammad Ali</h1>
+      </a>
+      <div>
+        <ul class="header-list">
+          <li>
+            <a class="header-list-item" href="#"> Description </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Ideation"> Ideation </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Powering-Components">
+              Powering Components
+            </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Video-Example">Video Example</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="Assignment2">
+      <h1>Description</h1>
+      <p>
+        The hope with this musical instrument was to channel the experience of
+        your childhood (or even adulthood) in swinging a lightsabre along with
+        gripping it various ways to produce music, allowing the user to not only
+        make sounds using the capacitive touch sensor (which is where I got
+        stuck) but also the movement of the entire hilt to create, and enhance
+        the sounds produced
+      </p>
+      <h1 id="Ideation">Ideation</h1>
+      <p>
+        I had a couple of ideas in the duration of this project. Below, I will
+        share some images and quick descriptions of them. I went with sketching
+        as my primary mode of exploration as I am currently taking another class
+        (CPSC 581, Human Computer Interaction 2) where this is a focus and I
+        thought that it would be a way to get some ideas out
+      </p>
+      <ul>
+        <h3>
+          Here are some initial ideas I had. They display some of the different
+          ideas I was toying with, some of which I prototyped, and tried to
+          implement in other ideas
+        </h3>
+        <li class="sketchImgWDescription">
+          <div class="sketchImg">
+            <img
+              width="10%"
+              src="assets/Assignment 2/Initial Sketches/Beat Boxing.jpg"
+              style="margin-left: 5rem; transform: rotate(270deg)"
+            />
+          </div>
+          <div style="margin-left: 10rem" class="sketchDescription">
+            <h3>Beat Boxing</h3>
+            <p>
+              A box which had sensors around (photoresistors) and a sonar sensor
+              in the back (which could detect distance) and puncing in different
+              areas of the box would create a different sound. Punching closer
+              to the back (near to the sonar sensor) would change the pitch. An
+              attempt at using our various degrees of freedom along with depth
+              perception to create music. Also, a potential fun workout.
+            </p>
+          </div>
+        </li>
+        <li class="sketchImgWDescription">
+          <div class="sketchImg">
+            <img
+              width="10%"
+              src="assets/Assignment 2/Initial Sketches/Musical Chairs.jpg"
+              style="margin-left: 5rem; transform: rotate(270deg)"
+            />
+          </div>
+          <div style="margin-left: 10rem" class="sketchDescription">
+            <h3>Musical Chairs</h3>
+            <p>
+              Sensors on the floor which would react to being covered by chairs
+              It was an attempt to use our sense of area and coverage to map and
+              modulate sound production
+            </p>
+          </div>
+        </li>
+        <li class="sketchImgWDescription">
+          <div class="sketchImg">
+            <img
+              width="10%"
+              src="assets/Assignment 2/Initial Sketches/Pencil Kalimba.jpg"
+              style="margin-left: 5rem"
+            />
+          </div>
+          <div style="margin-left: 10rem" class="sketchDescription">
+            <h3>Pencil Kalimba</h3>
+            <p>
+              A pencil with capacitive touch sensors which would map to a
+              kalimba. It would be a bit more versatile as you could also tap
+              the pencil to produce the sound
+            </p>
+          </div>
+        </li>
 
-<body>
-    <h1>This is Assignment 2</h1>
-</body>
-
+        <li class="sketchImgWDescription">
+          <div class="sketchImg">
+            <img
+              src="assets/Assignment 2/Initial Sketches/Water Piano.jpg"
+              style="transform: rotate(270deg); margin-left: 10rem"
+            />
+          </div>
+          <div class="sketchImg">
+            <img
+              src="assets/Assignment 2/Initial Sketches/Seesaw Trumpet.jpg"
+              style="transform: rotate(270deg); margin-left: 20rem"
+            />
+          </div>
+        </li>
+        <h3>
+          I ended up going with the idea of PVC Pipe lined with Copper wire
+        </h3>
+        <li class="sketchImgWDescription">
+          <div class="sketchImg">
+            <img
+              src="assets/Assignment 2/Initial Sketches/PVC Capacitive Sensor.jpg"
+              style="margin-left: 2rem"
+            />
+          </div>
+          <div class="sketchImg">
+            <img
+              src="assets/Assignment 2/Refined Sketches/PVC Lightsabre.jpg"
+              style="margin-left: 2rem"
+            />
+          </div>
+          <div class="sketchDescription">
+            <h3>PVC Capacitive Sensor</h3>
+            <p>
+              A PVC Pipe lined with Copper wire with an aluminium foil surface
+              to act as a capacitive surface which would map to different sounds
+            </p>
+            <p>
+              A light would eminate from the PVC (like the lightsabre) which
+              would be represent the current pitch
+            </p>
+            <p>
+              A sound sensor would detect the movement of the PVC (via airflow
+              and friction) allowing for further musical effects
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
