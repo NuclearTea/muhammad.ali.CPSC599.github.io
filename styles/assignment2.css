@@ -6,6 +6,7 @@
   height: fit-content;
   text-align: center;
   width: 100%;
+  overflow-x: hidden;
 
   h1 {
     font-weight: 400;
