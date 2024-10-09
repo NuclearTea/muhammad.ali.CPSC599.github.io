@@ -59,8 +59,19 @@
   }
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: lightgray;
-  color: white;
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  gap: 2rem;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+}
+
+.box {
+  width: 40%;
+  font-size: 1rem;
 }

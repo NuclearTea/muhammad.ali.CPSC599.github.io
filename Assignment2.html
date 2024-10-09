@@ -26,7 +26,7 @@
             <a class="header-list-item" href="#Midi-Exploration"> MIDI </a>
           </li>
           <li>
-            <a class="header-list-item" href="#Video-Example">Video Example</a>
+            <a class="header-list-item" href="#Resources">Resources</a>
           </li>
         </ul>
       </div>
@@ -160,20 +160,117 @@
       <h1 id="Midi-Exploration">Exploration with MIDI</h1>
       <p>
         One of the easiest ways to produce music digitally is using the MIDI
-        protocol. Using an Arduino Leonardo, a breadboard, a couple of wires and
-        buttons, I was easily able to create a MIDI controller which could
-        produce music. I was using a software called 'Ableton Live' to map the
-        MIDI output of my arduino to the sounds of a musical instrument
+        protocol. Using an Arduino Leonardo, a breadboard, a couple of wires,
+        some potentiometers, and buttons buttons, I was easily able to create a
+        MIDI controller which could produce music. I was using a software called
+        'Ableton Live' to map the MIDI output of my arduino to the sounds of a
+        musical instrument
       </p>
-      <iframe
-        width="560"
-        height="315"
-        src="https://youtube.com/embed/6OeV0LsmGsU?feature=share"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
+      <div class="row">
+        <iframe
+          width="560"
+          height="315"
+          src="https://youtube.com/embed/6OeV0LsmGsU?feature=share"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        <h3>Code:</h3>
+        <a
+          href="assets/Assignment 2/Code/MIDI_TEST.zip"
+          download="MIDI_TEST.zip"
+          >Click here to download the code</a
+        >
+        <ul>
+          <h3>Libraries Used:</h3>
+          <li>
+            <a
+              href="https://github.com/arduino-libraries/MIDIUSB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MIDIUSB:
+            </a>
+            Transmits MIDI messages over USB
+          </li>
+          <li>
+            <a
+              href="https://github.com/francobasaglia/MagicPot"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Magic Pot:
+            </a>
+            Helps with Potentiometer input
+          </li>
+        </ul>
+      </div>
+      <h1 id="Resources">Resources:</h1>
+      <ul>
+        <li class="row">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JZ5yPdoPooU"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+          <a
+            href="https://github.com/SwitchAndLever/theMIDInator"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><p>MIDInator</p></a
+          >
+          <div class="box">
+            Overview on how to physically build a MIDI controller along with how
+            to map the inputs to Ableton Live
+          </div>
+        </li>
+        <li class="row">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/hcm5H6f8MI8"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+          <a
+            href="https://github.com/silveirago/arduino_audio_midi_programming"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>Music nerd</p>
+          </a>
+
+          <div class="box">
+            More in-depth look into programming and how to use the MIDI
+            protocol. Also provides lots of the code that I used to create my
+            own MIDI Api.
+          </div>
+        </li>
+        <li>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://midi.org/midi-1-0-control-change-messages"
+          >
+            <p>The MIDI Reference Association reference</p>
+          </a>
+        </li>
+      </ul>
+      <h2>
+        The major issue with a simple MIDI controller that it lacks an embodied
+        experience.
+      </h2>
+      <h2>
+        It is purely mechanical and doesn't interface with the intrinsic human
+        perception and experience.
+      </h2>
     </div>
   </body>
 </html>
