@@ -34,6 +34,12 @@
               Building Phase
             </a>
           </li>
+          <li>
+            <a class="header-list-item" href="#Code"> Code </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Conclusion"> Conclusion </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -347,7 +353,7 @@
           </p>
         </div>
       </div>
-      <h2>
+      <h2 id="Code">
         The above video is my most successful prototype. Lets discuss the main
         code below.
       </h2>
@@ -385,8 +391,80 @@
               Helps create sensors for touch and other applications
             </li>
           </ul>
+          <h2>Code Flow</h2>
+          <p>
+            The code uses the CapacitiveSensor library to map digital pin inputs
+            to sensor values
+          </p>
+          <p>
+            Additionally, I wrote my own calibration layer which stores the
+            average, maximum, and minimum values during the calibration
+            function. The reason I use the calibration layer is to adjust the
+            capacitance of the sensors to the current surroundings.
+          </p>
+          <p>
+            I was unsuccessful in getting any consistent behaviour, as such, my
+            project is incomplete. Below, I discuss my learnings.
+          </p>
+          <p>
+            The code initially calibrates both the note copper wire and the
+            volume control copper wire. The CapacitiveSensorCalibration struct
+            stores the average, maximum, and minimum values which are used when
+            reading the sensor values to evaluate if a signal is properly
+            detected.
+          </p>
+          <h2>Embodiment</h2>
+          <p>
+            The hope was that utiilizing our sense of touch, position along with
+            our childhood (or adulthood) playtime skills would leverge more
+            aspects of the human experience that just pressing buttons and
+            moving toggles. As I displayed above, I created the basic MIDI
+            controller with relative ease and it would have been very easy to
+            just make something akin to a MIDI controller, but I didnt feel like
+            using buttons or toggles gave the tool an emobodied experience,
+            hence, I tried to be ambitious.
+          </p>
+          <h2>Circuit Schematic</h2>
+          <img
+            src="assets/Assignment 2/Circuit Schematic.jpg"
+            alt="Circuit Schematic"
+            width="50%"
+            style="border-radius: 0.5rem"
+          />
         </div>
       </div>
+      <h1 id="Conclusion">Conclusion</h1>
+      <h3>
+        I had a really fun time attempting this project as I found it a real
+        challenge to create this sensor using copper wire and aluminium foil
+      </h3>
+      <h3>Below are some of my learnings</h3>
+      <ul>
+        <li style="list-style: initial">
+          <p>
+            Take more time thinking about the materials I am going to use,
+            espeically if I am going the DIY route. PVC Pipe, electrical tape,
+            the carpet I'm on and the wooden surface I havev my arduino all
+            effect the capacitance of the environment and not mitigating against
+            these was an extreme oversight on my part. I believe this is the
+            primary reason why I was unable to finish my project.
+          </p>
+        </li>
+        <li style="list-style: initial">
+          <p>
+            Starting earlier would have allowed me more time to experiment, and
+            use additional sensors which would have made more sense, but other
+            classes impeded in my desire to start early
+          </p>
+        </li>
+        <li style="list-style: initial">
+          <p>
+            One thing that I did well was documenting much of my experience.
+            This allowed me to cross reference and show wierd behaviour I was
+            experiencing to others.
+          </p>
+        </li>
+      </ul>
     </div>
     <script src="scripts/prism.js"></script>
     <script src="scripts/assignment2.js"></script>
