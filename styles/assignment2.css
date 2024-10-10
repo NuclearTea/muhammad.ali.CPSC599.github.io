@@ -76,3 +76,10 @@
   width: 40%;
   font-size: 1rem;
 }
+
+.code {
+  width: 50%;
+  /* height: 20rem; */
+  /* overflow-y: scroll; */
+  margin-bottom: 10rem;
+}
