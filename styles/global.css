@@ -7,3 +7,13 @@ html {
 body {
   font-family: "Playfair Display", serif;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
