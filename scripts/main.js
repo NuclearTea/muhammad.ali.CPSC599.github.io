@@ -26,7 +26,7 @@ if (!movableText || !container) {
       movableText.style.transform = `translateY(-${pushUp}px)`;
 
       if (pushUp >= maxPushUpPxls * 0.95) {
-        window.location.assign("Assignment2.html");
+        window.location.assign("LightsabrePiano.html");
       }
     } else {
       // Reset the box to its original position if the cursor is not below
