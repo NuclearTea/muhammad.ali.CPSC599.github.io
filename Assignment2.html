@@ -1,472 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/navigation.css" />
-    <link rel="stylesheet" href="styles/assignment2.css" />
-    <link rel="stylesheet" href="styles/prism.css" />
-    <title>Assignment 2: Lightsabre Piano</title>
-  </head>
 
-  <body>
-    <nav id="navigation">
-      <a href="index.html">
-        <h1>Muhammad Ali</h1>
-      </a>
-      <div>
-        <ul class="header-list">
-          <li>
-            <a class="header-list-item" href="#"> Description </a>
-          </li>
-          <li>
-            <a class="header-list-item" href="#Ideation"> Ideation </a>
-          </li>
-          <li>
-            <a class="header-list-item" href="#Midi-Exploration"> MIDI </a>
-          </li>
-          <li>
-            <a class="header-list-item" href="#Resources">Resources</a>
-          </li>
-          <li>
-            <a class="header-list-item" href="#Building-Phase">
-              Building Phase
-            </a>
-          </li>
-          <li>
-            <a class="header-list-item" href="#Code"> Code </a>
-          </li>
-          <li>
-            <a class="header-list-item" href="#Conclusion"> Conclusion </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="Assignment2">
-      <h1>Description</h1>
-      <p>
-        The hope with this musical instrument was to channel the experience of
-        your childhood (or even adulthood) in swinging a lightsabre along with
-        gripping it various ways to produce music, allowing the user to not only
-        make sounds using the capacitive touch sensor (which is where I got
-        stuck) but also the movement of the entire hilt to create, and enhance
-        the sounds produced
-      </p>
-      <h1 id="Ideation">Ideation</h1>
-      <p>
-        I had a couple of ideas in the duration of this project. Below, I will
-        share some images and quick descriptions of them. I went with sketching
-        as my primary mode of exploration as I am currently taking another class
-        (CPSC 581, Human Computer Interaction 2) where this is a focus and I
-        thought that it would be a way to get some ideas out
-      </p>
-      <ul>
-        <h3>
-          Here are some initial ideas I had. They display some of the different
-          ideas I was toying with, some of which I prototyped, and tried to
-          implement in other ideas
-        </h3>
-        <li class="sketchImgWDescription">
-          <div class="sketchImg">
-            <img
-              width="10%"
-              src="assets/Assignment 2/Initial Sketches/Beat Boxing.jpg"
-              style="margin-left: 5rem; transform: rotate(270deg)"
-            />
-          </div>
-          <div style="margin-left: 10rem" class="sketchDescription">
-            <h3>Beat Boxing</h3>
-            <p>
-              A box which had sensors around (photoresistors) and a sonar sensor
-              in the back (which could detect distance) and puncing in different
-              areas of the box would create a different sound. Punching closer
-              to the back (near to the sonar sensor) would change the pitch. An
-              attempt at using our various degrees of freedom along with depth
-              perception to create music. Also, a potential fun workout.
-            </p>
-          </div>
-        </li>
-        <li class="sketchImgWDescription">
-          <div class="sketchImg">
-            <img
-              width="10%"
-              src="assets/Assignment 2/Initial Sketches/Musical Chairs.jpg"
-              style="margin-left: 5rem; transform: rotate(270deg)"
-            />
-          </div>
-          <div style="margin-left: 10rem" class="sketchDescription">
-            <h3>Musical Chairs</h3>
-            <p>
-              Sensors on the floor which would react to being covered by chairs
-              It was an attempt to use our sense of area and coverage to map and
-              modulate sound production
-            </p>
-          </div>
-        </li>
-        <li class="sketchImgWDescription">
-          <div class="sketchImg">
-            <img
-              width="10%"
-              src="assets/Assignment 2/Initial Sketches/Pencil Kalimba.jpg"
-              style="margin-left: 5rem"
-            />
-          </div>
-          <div style="margin-left: 10rem" class="sketchDescription">
-            <h3>Pencil Kalimba</h3>
-            <p>
-              A pencil with capacitive touch sensors which would map to a
-              kalimba. It would be a bit more versatile as you could also tap
-              the pencil to produce the sound
-            </p>
-          </div>
-        </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/navigation.css" />
+  <link rel="stylesheet" href="styles/assignment2.css" />
+  <link rel="stylesheet" href="styles/prism.css" />
+  <title>Lightsabre Piano</title>
+</head>
 
-        <li class="sketchImgWDescription">
-          <div class="sketchImg">
-            <img
-              src="assets/Assignment 2/Initial Sketches/Water Piano.jpg"
-              style="transform: rotate(270deg); margin-left: 10rem"
-            />
-          </div>
-          <div class="sketchImg">
-            <img
-              src="assets/Assignment 2/Initial Sketches/Seesaw Trumpet.jpg"
-              style="transform: rotate(270deg); margin-left: 20rem"
-            />
-          </div>
+<body>
+  <nav id="navigation">
+    <a href="index.html">
+      <h1>Muhammad Ali</h1>
+    </a>
+    <div>
+      <ul class="header-list">
+        <li>
+          <a class="header-list-item" href="#"> Description </a>
         </li>
-        <h3>
-          I ended up going with the idea of PVC Pipe lined with Copper wire
-        </h3>
-        <li class="sketchImgWDescription">
-          <div class="sketchImg">
-            <img
-              src="assets/Assignment 2/Initial Sketches/PVC Capacitive Sensor.jpg"
-              style="margin-left: 2rem"
-            />
-          </div>
-          <div class="sketchImg">
-            <img
-              src="assets/Assignment 2/Refined Sketches/PVC Lightsabre.jpg"
-              style="margin-left: 2rem"
-            />
-          </div>
-          <div class="sketchDescription">
-            <h3>PVC Capacitive Sensor</h3>
-            <p>
-              A PVC Pipe lined with Copper wire with an aluminium foil surface
-              to act as a capacitive surface which would map to different sounds
-            </p>
-            <p>
-              A light would eminate from the PVC (like the lightsabre) which
-              would be represent the current pitch
-            </p>
-            <p>
-              A sound sensor would detect the movement of the PVC (via airflow
-              and friction) allowing for further musical effects
-            </p>
-          </div>
+        <li>
+          <a class="header-list-item" href="#Ideation"> Ideation </a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#Midi-Exploration"> MIDI </a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#Resources">Resources</a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#Building-Phase">
+            Building Phase
+          </a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#Code"> Code </a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#Conclusion"> Conclusion </a>
         </li>
       </ul>
-      <h1 id="Midi-Exploration">Exploration with MIDI</h1>
-      <p>
-        One of the easiest ways to produce music digitally is using the MIDI
-        protocol. Using an Arduino Leonardo, a breadboard, a couple of wires,
-        some potentiometers, and buttons buttons, I was easily able to create a
-        MIDI controller which could produce music. I was using a software called
-        'Ableton Live' to map the MIDI output of my arduino to the sounds of a
-        musical instrument
-      </p>
-      <div class="row">
-        <iframe
-          width="560"
-          height="315"
-          src="https://youtube.com/embed/6OeV0LsmGsU?feature=share"
-          frameborder="0"
+    </div>
+  </nav>
+  <div class="Assignment2">
+    <h1>Description</h1>
+    <p>
+      The hope with this musical instrument was to channel the experience of
+      your childhood (or even adulthood) in swinging a lightsabre along with
+      gripping it various ways to produce music, allowing the user to not only
+      make sounds using the capacitive touch sensor (which is where I got
+      stuck) but also the movement of the entire hilt to create, and enhance
+      the sounds produced
+    </p>
+    <h1 id="Ideation">Ideation</h1>
+    <p>
+      I had a couple of ideas in the duration of this project. Below, I will
+      share some images and quick descriptions of them. I went with sketching
+      as my primary mode of exploration as I am currently taking another class
+      (CPSC 581, Human Computer Interaction 2) where this is a focus and I
+      thought that it would be a way to get some ideas out
+    </p>
+    <ul>
+      <h3>
+        Here are some initial ideas I had. They display some of the different
+        ideas I was toying with, some of which I prototyped, and tried to
+        implement in other ideas
+      </h3>
+      <li class="sketchImgWDescription">
+        <div class="sketchImg">
+          <img width="10%" src="assets/Assignment 2/Initial Sketches/Beat Boxing.jpg"
+            style="margin-left: 5rem; transform: rotate(270deg)" />
+        </div>
+        <div style="margin-left: 10rem" class="sketchDescription">
+          <h3>Beat Boxing</h3>
+          <p>
+            A box which had sensors around (photoresistors) and a sonar sensor
+            in the back (which could detect distance) and punching in different
+            areas of the box would create a different sound. Punching closer
+            to the back (near to the sonar sensor) would change the pitch. An
+            attempt at using our various degrees of freedom along with depth
+            perception to create music. Also, a potential fun workout.
+          </p>
+        </div>
+      </li>
+      <li class="sketchImgWDescription">
+        <div class="sketchImg">
+          <img width="10%" src="assets/Assignment 2/Initial Sketches/Musical Chairs.jpg"
+            style="margin-left: 5rem; transform: rotate(270deg)" />
+        </div>
+        <div style="margin-left: 10rem" class="sketchDescription">
+          <h3>Musical Chairs</h3>
+          <p>
+            Sensors on the floor which would react to being covered by chairs
+            It was an attempt to use our sense of area and coverage to map and
+            modulate sound production
+          </p>
+        </div>
+      </li>
+      <li class="sketchImgWDescription">
+        <div class="sketchImg">
+          <img width="10%" src="assets/Assignment 2/Initial Sketches/Pencil Kalimba.jpg" style="margin-left: 5rem" />
+        </div>
+        <div style="margin-left: 10rem" class="sketchDescription">
+          <h3>Pencil Kalimba</h3>
+          <p>
+            A pencil with capacitive touch sensors which would map to a
+            kalimba. It would be a bit more versatile as you could also tap
+            the pencil to produce the sound
+          </p>
+        </div>
+      </li>
+
+      <li class="sketchImgWDescription">
+        <div class="sketchImg">
+          <img src="assets/Assignment 2/Initial Sketches/Water Piano.jpg"
+            style="transform: rotate(270deg); margin-left: 10rem" />
+        </div>
+        <div class="sketchImg">
+          <img src="assets/Assignment 2/Initial Sketches/Seesaw Trumpet.jpg"
+            style="transform: rotate(270deg); margin-left: 20rem" />
+        </div>
+      </li>
+      <h3>
+        I ended up going with the idea of PVC Pipe lined with Copper wire
+      </h3>
+      <li class="sketchImgWDescription">
+        <div class="sketchImg">
+          <img src="assets/Assignment 2/Initial Sketches/PVC Capacitive Sensor.jpg" style="margin-left: 2rem" />
+        </div>
+        <div class="sketchImg">
+          <img src="assets/Assignment 2/Refined Sketches/PVC Lightsabre.jpg" style="margin-left: 2rem" />
+        </div>
+        <div class="sketchDescription">
+          <h3>PVC Capacitive Sensor</h3>
+          <p>
+            A PVC Pipe lined with Copper wire with an aluminum foil surface
+            to act as a capacitive surface which would map to different sounds
+          </p>
+          <p>
+            A light would emanate from the PVC (like the lightsabre) which
+            would be represent the current pitch
+          </p>
+          <p>
+            A sound sensor would detect the movement of the PVC (via airflow
+            and friction) allowing for further musical effects
+          </p>
+        </div>
+      </li>
+    </ul>
+    <h1 id="Midi-Exploration">Exploration with MIDI</h1>
+    <p>
+      One of the easiest ways to produce music digitally is using the MIDI
+      protocol. Using an Arduino Leonardo, a breadboard, a couple of wires,
+      some potentiometers, and buttons buttons, I was easily able to create a
+      MIDI controller which could produce music. I was using a software called
+      'Ableton Live' to map the MIDI output of my arduino to the sounds of a
+      musical instrument
+    </p>
+    <div class="row">
+      <iframe width="560" height="315" src="https://youtube.com/embed/6OeV0LsmGsU?feature=share" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <h3>Code:</h3>
+      <a href="assets/Assignment 2/Code/MIDI_TEST.zip" download="MIDI_TEST.zip">Click here to download the code</a>
+      <ul>
+        <h3>Libraries Used:</h3>
+        <li>
+          <a href="https://github.com/arduino-libraries/MIDIUSB" target="_blank" rel="noopener noreferrer">
+            MIDIUSB:
+          </a>
+          Transmits MIDI messages over USB
+        </li>
+        <li>
+          <a href="https://github.com/francobasaglia/MagicPot" target="_blank" rel="noopener noreferrer">
+            Magic Pot:
+          </a>
+          Helps with Potentiometer input
+        </li>
+      </ul>
+    </div>
+    <h1 id="Resources">Resources:</h1>
+    <ul>
+      <li class="row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JZ5yPdoPooU" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        >
+          allowfullscreen>
         </iframe>
-        <h3>Code:</h3>
-        <a
-          href="assets/Assignment 2/Code/MIDI_TEST.zip"
-          download="MIDI_TEST.zip"
-          >Click here to download the code</a
-        >
-        <ul>
-          <h3>Libraries Used:</h3>
+        <a href="https://github.com/SwitchAndLever/theMIDInator" target="_blank" rel="noopener noreferrer">
+          <p>MIDInator</p>
+        </a>
+        <div class="box">
+          Overview on how to physically build a MIDI controller along with how
+          to map the inputs to Ableton Live
+        </div>
+      </li>
+      <li class="row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hcm5H6f8MI8" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <a href="https://github.com/silveirago/arduino_audio_midi_programming" target="_blank"
+          rel="noopener noreferrer">
+          <p>Music nerd</p>
+        </a>
+
+        <div class="box">
+          More in-depth look into programming and how to use the MIDI
+          protocol. Also provides lots of the code that I used to create my
+          own MIDI Api.
+        </div>
+      </li>
+      <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://midi.org/midi-1-0-control-change-messages">
+          <p>The MIDI Reference Association reference</p>
+        </a>
+      </li>
+    </ul>
+    <h2>
+      The major issue with a simple MIDI controller that it lacks an embodied
+      experience.
+    </h2>
+    <h2>
+      It is purely mechanical and doesn't interface with the intrinsic human
+      perception and experience.
+    </h2>
+    <h1 id="Building-Phase">Building Phase</h1>
+    <h2>
+      Using a PVC Pipe, some copper wire, aluminum foil and electrical tape,
+      I went on an ambitious journey to develop a capacitive sensor with the
+      hopes of mapping touch to different MIDI controls
+    </h2>
+    <div class="row">
+      <img src="assets/Assignment 2/Prototypes/PVC Copper Wire Prototype 1.jpg" alt="PVC Prototype 1" width="20%" />
+      <img src="assets/Assignment 2/Prototypes/PVC Copper Wire Prototype 2.jpg" alt="PVC Prototype 2" width="20%" />
+      <div class="box">
+        <p>Here are some different approaches I took:</p>
+        <ol>
           <li>
-            <a
-              href="https://github.com/arduino-libraries/MIDIUSB"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            1. Wiring along the PVC Pipe and attaching some foil to the end of
+            it.
+          </li>
+          <li>
+            2. Coiling the wire along and connecting directly to the arduino
+          </li>
+        </ol>
+        <p>
+          I took many other approaches as well, however, they also were
+          unsuccessful
+        </p>
+      </div>
+    </div>
+    <h2>
+      I encountered many challenges along the way, but also some successes
+    </h2>
+    <div class="row">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ao5l-mkmegg"></iframe>
+      <div class="box">
+        <p>
+          This shows a version where I used the aluminum foil as an area of
+          interface, without needing to touch. Unfortunately, I was unable to
+          reproduce this after.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/P2q1xJjh_lU"></iframe>
+      <div class="box">
+        <p>
+          This shows a version where I used the touch to interface with the
+          sensors. (May need to turn up the volume)
+        </p>
+        <p>
+          My right hand (one that is closest to the laptop) is responsible to
+          play a note, while my left hand (out of shot) is responsible to
+          change the volume. It is clear to see that it I had a really
+          difficult time refining and calibrating these sensors reliably.
+        </p>
+      </div>
+    </div>
+    <h2 id="Code">
+      The above video is my most successful prototype. Lets discuss the main
+      code below.
+    </h2>
+    <a href="assets/Assignment 2/Code/Copper_wire_capacitive_sensing.zip" download="Copper_wire_capacitive_sensing.zip">
+      <p>Download all the code</p>
+    </a>
+    <div style="margin-left: 2rem; align-items: start" class="row">
+      <pre style="height: fit-content"><code
+            id="code-container" class="language-cpp"></code></pre>
+
+      <div class="column">
+        <h2>Major Libraries Used</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/arduino-libraries/MIDIUSB" target="_blank" rel="noopener noreferrer">
               MIDIUSB:
             </a>
             Transmits MIDI messages over USB
           </li>
           <li>
-            <a
-              href="https://github.com/francobasaglia/MagicPot"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Magic Pot:
+            <a href="https://github.com/PaulStoffregen/CapacitiveSensor" target="_blank" rel="noopener noreferrer">
+              CapacitiveSensor:
             </a>
-            Helps with Potentiometer input
+            Helps create sensors for touch and other applications
           </li>
         </ul>
+        <h2>Code Flow</h2>
+        <p>
+          The code uses the CapacitiveSensor library to map digital pin inputs
+          to sensor values
+        </p>
+        <p>
+          Additionally, I wrote my own calibration layer which stores the
+          average, maximum, and minimum values during the calibration
+          function. The reason I use the calibration layer is to adjust the
+          capacitance of the sensors to the current surroundings.
+        </p>
+        <p>
+          I was unsuccessful in getting any consistent behaviour, as such, my
+          project is incomplete. Below, I discuss my learnings.
+        </p>
+        <p>
+          The code initially calibrates both the note copper wire and the
+          volume control copper wire. The CapacitiveSensorCalibration struct
+          stores the average, maximum, and minimum values which are used when
+          reading the sensor values to evaluate if a signal is properly
+          detected.
+        </p>
+        <h2>Embodiment</h2>
+        <p>
+          The hope was that utilizing our sense of touch, position along with
+          our childhood (or adulthood) playtime skills would leverage more
+          aspects of the human experience that just pressing buttons and
+          moving toggles. As I displayed above, I created the basic MIDI
+          controller with relative ease and it would have been very easy to
+          just make something akin to a MIDI controller, but I didn't feel like
+          using buttons or toggles gave the tool an embodied experience,
+          hence, I tried to be ambitious.
+        </p>
+        <h2>Circuit Schematic</h2>
+        <img src="assets/Assignment 2/Circuit Schematic.jpg" alt="Circuit Schematic" width="50%"
+          style="border-radius: 0.5rem" />
       </div>
-      <h1 id="Resources">Resources:</h1>
-      <ul>
-        <li class="row">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/JZ5yPdoPooU"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
-          <a
-            href="https://github.com/SwitchAndLever/theMIDInator"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><p>MIDInator</p></a
-          >
-          <div class="box">
-            Overview on how to physically build a MIDI controller along with how
-            to map the inputs to Ableton Live
-          </div>
-        </li>
-        <li class="row">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/hcm5H6f8MI8"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
-          <a
-            href="https://github.com/silveirago/arduino_audio_midi_programming"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p>Music nerd</p>
-          </a>
-
-          <div class="box">
-            More in-depth look into programming and how to use the MIDI
-            protocol. Also provides lots of the code that I used to create my
-            own MIDI Api.
-          </div>
-        </li>
-        <li>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://midi.org/midi-1-0-control-change-messages"
-          >
-            <p>The MIDI Reference Association reference</p>
-          </a>
-        </li>
-      </ul>
-      <h2>
-        The major issue with a simple MIDI controller that it lacks an embodied
-        experience.
-      </h2>
-      <h2>
-        It is purely mechanical and doesn't interface with the intrinsic human
-        perception and experience.
-      </h2>
-      <h1 id="Building-Phase">Building Phase</h1>
-      <h2>
-        Using a PVC Pipe, some copper wire, aluminium foil and electrical tape,
-        I went on an ambitoius journey to develop a capacitive sensor with the
-        hopes of mapping touch to different MIDI controls
-      </h2>
-      <div class="row">
-        <img
-          src="assets/Assignment 2/Prototypes/PVC Copper Wire Prototype 1.jpg"
-          alt="PVC Prototype 1"
-          width="20%"
-        />
-        <img
-          src="assets/Assignment 2/Prototypes/PVC Copper Wire Prototype 2.jpg"
-          alt="PVC Prototype 2"
-          width="20%"
-        />
-        <div class="box">
-          <p>Here are some different approaches I took:</p>
-          <ol>
-            <li>
-              1. Wiring along the PVC Pipe and attaching some foil to the end of
-              it.
-            </li>
-            <li>
-              2. Coiling the wire along and connecting directly to the arduino
-            </li>
-          </ol>
-          <p>
-            I took many other approaches as well, however, they also were
-            unsuccessful
-          </p>
-        </div>
-      </div>
-      <h2>
-        I encountered many challenges along the way, but also some successes
-      </h2>
-      <div class="row">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/ao5l-mkmegg"
-        ></iframe>
-        <div class="box">
-          <p>
-            This shows a version where I used the aluminium foil as an area of
-            interface, without needing to touch. Unfortunately, I was unable to
-            reproduce this after.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/P2q1xJjh_lU"
-        ></iframe>
-        <div class="box">
-          <p>
-            This shows a version where I used the touch to interface with the
-            sensors. (May need to turn up the volume)
-          </p>
-          <p>
-            My right hand (one that is closest to the laptop) is responsible to
-            play a note, while my left hand (out of shot) is responsible to
-            change the volume. It is clear to see that it I had a really
-            difficult time refining and calibrating these sensors reliably.
-          </p>
-        </div>
-      </div>
-      <h2 id="Code">
-        The above video is my most successful prototype. Lets discuss the main
-        code below.
-      </h2>
-      <a
-        href="assets/Assignment 2/Code/Copper_wire_capacitive_sensing.zip"
-        download="Copper_wire_capacitive_sensing.zip"
-      >
-        <p>Download all the code</p>
-      </a>
-      <div style="margin-left: 2rem; align-items: start" class="row">
-        <pre style="height: fit-content"><code
-            id="code-container" class="language-cpp"></code></pre>
-
-        <div class="column">
-          <h2>Major Libraries Used</h2>
-          <ul>
-            <li>
-              <a
-                href="https://github.com/arduino-libraries/MIDIUSB"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                MIDIUSB:
-              </a>
-              Transmits MIDI messages over USB
-            </li>
-            <li>
-              <a
-                href="https://github.com/PaulStoffregen/CapacitiveSensor"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CapacitiveSensor:
-              </a>
-              Helps create sensors for touch and other applications
-            </li>
-          </ul>
-          <h2>Code Flow</h2>
-          <p>
-            The code uses the CapacitiveSensor library to map digital pin inputs
-            to sensor values
-          </p>
-          <p>
-            Additionally, I wrote my own calibration layer which stores the
-            average, maximum, and minimum values during the calibration
-            function. The reason I use the calibration layer is to adjust the
-            capacitance of the sensors to the current surroundings.
-          </p>
-          <p>
-            I was unsuccessful in getting any consistent behaviour, as such, my
-            project is incomplete. Below, I discuss my learnings.
-          </p>
-          <p>
-            The code initially calibrates both the note copper wire and the
-            volume control copper wire. The CapacitiveSensorCalibration struct
-            stores the average, maximum, and minimum values which are used when
-            reading the sensor values to evaluate if a signal is properly
-            detected.
-          </p>
-          <h2>Embodiment</h2>
-          <p>
-            The hope was that utiilizing our sense of touch, position along with
-            our childhood (or adulthood) playtime skills would leverge more
-            aspects of the human experience that just pressing buttons and
-            moving toggles. As I displayed above, I created the basic MIDI
-            controller with relative ease and it would have been very easy to
-            just make something akin to a MIDI controller, but I didnt feel like
-            using buttons or toggles gave the tool an emobodied experience,
-            hence, I tried to be ambitious.
-          </p>
-          <h2>Circuit Schematic</h2>
-          <img
-            src="assets/Assignment 2/Circuit Schematic.jpg"
-            alt="Circuit Schematic"
-            width="50%"
-            style="border-radius: 0.5rem"
-          />
-        </div>
-      </div>
-      <h1 id="Conclusion">Conclusion</h1>
-      <h3>
-        I had a really fun time attempting this project as I found it a real
-        challenge to create this sensor using copper wire and aluminium foil
-      </h3>
-      <h3>Below are some of my learnings</h3>
-      <ul>
-        <li style="list-style: initial">
-          <p>
-            Take more time thinking about the materials I am going to use,
-            espeically if I am going the DIY route. PVC Pipe, electrical tape,
-            the carpet I'm on and the wooden surface I havev my arduino all
-            effect the capacitance of the environment and not mitigating against
-            these was an extreme oversight on my part. I believe this is the
-            primary reason why I was unable to finish my project.
-          </p>
-        </li>
-        <li style="list-style: initial">
-          <p>
-            Starting earlier would have allowed me more time to experiment, and
-            use additional sensors which would have made more sense, but other
-            classes impeded in my desire to start early
-          </p>
-        </li>
-        <li style="list-style: initial">
-          <p>
-            One thing that I did well was documenting much of my experience.
-            This allowed me to cross reference and show wierd behaviour I was
-            experiencing to others.
-          </p>
-        </li>
-      </ul>
     </div>
-    <script src="scripts/prism.js"></script>
-    <script src="scripts/assignment2.js"></script>
-  </body>
+    <h1 id="Conclusion">Conclusion</h1>
+    <h3>
+      I had a really fun time attempting this project as I found it a real
+      challenge to create this sensor using copper wire and aluminum foil
+    </h3>
+    <h3>Below are some of my learnings</h3>
+    <ul>
+      <li style="list-style: initial">
+        <p>
+          Take more time thinking about the materials I am going to use,
+          especially if I am going the DIY route. PVC Pipe, electrical tape,
+          the carpet I'm on and the wooden surface all
+          effect the capacitance of the environment and not mitigating against
+          these was an extreme oversight on my part. I believe this is the
+          primary reason why I was unable to finish my project.
+        </p>
+      </li>
+      <li style="list-style: initial">
+        <p>
+          Starting earlier would have allowed me more time to experiment, and
+          use additional sensors which would have made more sense, but other
+          classes impeded in my desire to start early
+        </p>
+      </li>
+      <li style="list-style: initial">
+        <p>
+          One thing that I did well was documenting much of my experience.
+          This allowed me to cross reference and show weird behaviour I was
+          experiencing to others.
+        </p>
+      </li>
+    </ul>
+  </div>
+  <script src="scripts/prism.js"></script>
+  <script src="scripts/assignment2.js"></script>
+</body>
+
 </html>
