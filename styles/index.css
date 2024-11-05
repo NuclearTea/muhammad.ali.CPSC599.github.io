@@ -91,3 +91,21 @@ h2 {
     transition: transform 1s ease-out;
   }
 }
+
+.Servo-Muscles {
+  justify-content: center;
+  align-items: center;
+
+  img {
+    border-radius: 1rem;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 5rem;
+  }
+
+  .intro {
+    gap: 2rem;
+  }
+}
