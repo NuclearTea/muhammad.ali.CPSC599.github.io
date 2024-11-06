@@ -4,11 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 3 Info</title>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/ServoMuscles.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=trending_flat" />
+    <title>Making Muscles with Servos</title>
 </head>
 
 <body>
-    <h1>This is Assignment 3</h1>
+    <nav id="navigation">
+        <a href="index.html">
+            <h1>Muhammad Ali</h1>
+        </a>
+        <div>
+            <ul class="header-list">
+                <li>
+                    <a class="header-list-item" href="#">
+                        Description
+                    </a>
+                </li>
+                <li>
+                    <a class="header-list-item" href="#My-Dataset">
+                        My Dataset
+                    </a>
+                </li>
+                <li>
+                    <a class="header-list-item" href="#Versions">Versions</a>
+                </li>
+                <li>
+                    <a class="header-list-item" href="#Video-Example">Video Example</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="Servo-Muscles column centre-align">
+        <h1>Making Muscles with Servos</h1>
+
+        <h2>Description</h2>
+
+        <div class=" description row centre-align">
+            <h4>Find/create a dataset that is personal to you.</h4>
+            <span style="font-size: 3rem;" class="material-symbols-outlined">
+                trending_flat
+            </span>
+            <h4>Visualize this data using actuation with an arduino using actuation.</h4>
+        </div>
+
+
+
+        <h2 id="My-Dataset">My Dataset</h2>
+        <h4>I was an athlete for many years and during that time, I learned how to workout and train.</h4>
+        <h4>From that time period, I discovered how much I loved to train and from that point on, I have been training
+            ever since.</h4>
+        <h4>Training also includes tracking my workouts (exercises, sets, reps, rpe, and my general feelings during the
+            sessions), done mainly in physical notebooks originally, and now, in spreadsheets.</h4>
+
+        <h1 id="Versions">Versions</h1>
+
+
+        <div class="slider-crank-initial row centre-align">
+            <div class="column centre-align">
+                <h3>My initial ideas revolved around using a slider crank to move different parts of the wooden figure
+                </h3>
+                <h4>On the right is a video showing my initial slider crank</h4>
+                <a href="https://learn.adafruit.com/cardboard-slider-crank?embeds=allow"
+                    referrerpolicy="noopener noreferrer" target="_blank">This is the tutorial I followed
+                    to create this</a>
+            </div>
+            <iframe width="600" height="350" src="https://youtube.com/embed/94n-kBzwXVw?feature=share" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <h3>This resulted in different attempts to make the figure move using a slider crank, which you can see</h3>
+        <div class="slider-crank-move-arm row centre-align">
+            <div class="column centre-align">
+                <h4>This is attaching the slider crank directly to the arm</h4>
+                <iframe width="600" height="350" src="https://youtube.com/embed/UrYQwplbOQ8?feature=share"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="column centre-align">
+                <h4>This is attaching the slider crank to a string which is attached to the arm</h4>
+                <iframe width="600" height="350" src="https://youtube.com/embed/fcBgnU5F3i0?feature=share"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 
 </html>
