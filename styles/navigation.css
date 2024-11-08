@@ -11,7 +11,7 @@ nav {
   z-index: 1000;
   background-color: white;
   border-bottom: 1px solid lightgray;
-
+  height: 4.5rem;
   a {
     text-decoration: none;
     color: black;

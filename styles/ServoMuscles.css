@@ -18,10 +18,66 @@
     font-size: 2.5rem;
     font-weight: 200;
   }
+
+  h5 {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+}
+
+.title {
+  background-color: var(--Raisin-Black);
+  color: white;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.description-title,
+.initial-versions-title,
+.final-video-example-title {
+  border-radius: 1rem 1rem 0 0;
 }
 
 .description {
-  gap: 2rem;
+  background-color: var(--Pale-Dogwood);
+}
+
+.description-detailed {
+  gap: 1rem;
+}
+
+.mechanical-systems {
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  width: 100%;
+  .column {
+    width: 25%;
+  }
+  .column:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .column:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
+
+.my-dataset {
+  width: 100%;
+
+  .column:first-child {
+    background-color: var(--Arsenic);
+    border-radius: 1rem 0 0 1rem;
+    width: 33%;
+    color: white;
+  }
+
+  .column:last-child {
+    border-radius: 0 1rem 1rem 0;
+    width: 67%;
+    color: white;
+    background-color: var(--Raspberry-Rose);
+  }
 }
 
 .slider-crank-initial {
@@ -32,10 +88,17 @@
   }
 }
 
-.slider-crank-move-arm {
-  gap: 2rem;
+.final-video-example {
+  width: 100%;
+  justify-content: space-between;
+  .column:first-child {
+    background-color: var(--Pale-Dogwood);
+    width: 55%;
+  }
 }
 
+.description-detailed,
+.slider-crank-move-arm,
 .servo-as-muscles {
   gap: 2rem;
 }

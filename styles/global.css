@@ -23,3 +23,9 @@ body {
   align-items: center;
   text-align: center;
 }
+
+.blank-text-for-height {
+  visibility: hidden;
+  height: 4.5rem; /*  height of navigation bar */
+  content: "Blank Space for Height";
+}

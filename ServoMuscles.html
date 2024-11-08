@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/pallette.css" />
     <link rel="stylesheet" href="styles/navigation.css" />
     <link rel="stylesheet" href="styles/ServoMuscles.css" />
     <link rel="stylesheet"
@@ -42,9 +43,12 @@
     <div class="Servo-Muscles column centre-align">
         <h1>Making Muscles with Servos</h1>
 
-        <h2>Description</h2>
+        <div class="title description-title">
+            <h2>Description</h2>
+        </div>
 
-        <div class=" description row centre-align">
+
+        <div class="description row centre-align">
             <h4>Find/create a dataset that is personal to you.</h4>
             <span style="font-size: 3rem;" class="material-symbols-outlined">
                 trending_flat
@@ -52,44 +56,74 @@
             <h4>Visualize this data using actuation with an arduino.</h4>
         </div>
 
-        <h4>We were tasked to find/create a dataset that represents something about yourself. </h4>
-        <h4>Then, we must represent this data (or the change in the data) using actuation (servos, stepper motors) which
-            often, would involve mechanical systems like:
-            <ul>
-                <li>Rack & Pinion</li>
-                <li>Slider Crank</li>
-                <li>Hinges</li>
-                <li>wedges</li>
-            </ul>
+        <div class="row description-detailed">
+            <h4>We were tasked to find/create a dataset that represents something about yourself. </h4>
+            <h4>Then, we must represent this data (or the change in the data) using actuation (servos, stepper motors)
+                which
+                often, would involve mechanical systems like:
+            </h4>
+        </div>
+        <div class="row 
+        mechanical-systems">
+            <div style="
+            color: white;
+            background-color: var(--Raisin-Black);" class="column">
+                <h4>Rack & Pinion</h4>
+            </div>
+            <div style="
+            color: white;
+            background-color: var(--Moonstone);" class="column">
+                <h4>Slider Crank</h4>
+            </div>
+            <div style="
+            color: white;
+            background-color: var(--Raspberry-Rose);" class="column">
+                <h4>Hinges</h4>
+            </div>
+            <div style="
+            color: rgb(4, 4, 4);
+            background-color: var(--Fairy-Tale);" class="column">
+                <h4>Wedges</h4>
+            </div>
+        </div>
+        <div id="My-Dataset" class="blank-text-for-height"></div>
+        <div class="row my-dataset">
+            <div class="column centre-align">
+                <h2>My Dataset</h2>
+            </div>
+            <div class="column centre-align">
+                <h5>I was an athlete for many years and during that time, I learned how to workout and train.</h5>
+                <h5>From that time period, I discovered how much I loved to train and from that point on, I have been
+                    training
+                    ever since.</h5>
+                <h5>Training also includes tracking my workouts (exercises, sets, reps, rpe, and my general feelings
+                    during the
+                    sessions), done mainly in physical notebooks originally, and now, in spreadsheets.</h5>
+            </div>
+        </div>
 
-        </h4>
-
-
-        <h2 id="My-Dataset">My Dataset</h2>
-        <h4>I was an athlete for many years and during that time, I learned how to workout and train.</h4>
-        <h4>From that time period, I discovered how much I loved to train and from that point on, I have been training
-            ever since.</h4>
-        <h4>Training also includes tracking my workouts (exercises, sets, reps, rpe, and my general feelings during the
-            sessions), done mainly in physical notebooks originally, and now, in spreadsheets.</h4>
-
-        <h1 id="Initial-Versions">Initial Versions</h1>
+        <div id="Initial-Versions" class="blank-text-for-height"></div>
+        <div class="title initial-versions-title">
+            <h1>Initial Versions</h1>
+        </div>
 
 
         <div class="slider-crank-initial row centre-align">
             <div class="column centre-align">
-                <h3>My initial ideas revolved around using a slider crank to move different parts of the wooden figure
-                </h3>
-                <h4>On the right is a video showing my initial slider crank</h4>
+                <h4>My initial ideas revolved around using a slider crank to move different parts of the wooden figure
+                </h4>
                 <a href="https://learn.adafruit.com/cardboard-slider-crank?embeds=allow"
                     referrerpolicy="noopener noreferrer" target="_blank">This is the tutorial I followed
                     to create this slider crank</a>
             </div>
             <div class="column centre-align">
+                <h4>A video showing my initial slider crank</h4>
                 <iframe width="600" height="350" src="https://youtube.com/embed/94n-kBzwXVw?feature=share"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
+
                 <a href="https://www.electronics-lab.com/project/using-sg90-servo-motor-arduino/"
                     referrerpolicy="noopener noreferrer" target="_blank">This a reference I used to program the
                     servos</a>
@@ -97,10 +131,10 @@
 
         </div>
 
-        <h3>This resulted in different attempts to make the figure move using a slider crank, which you can see</h3>
+        <h4>This resulted in different attempts to make the figure move using a slider crank</h4>
         <div class="slider-crank-move-arm row centre-align">
             <div class="column centre-align">
-                <h4>This is attaching the slider crank directly to the arm</h4>
+                <h5>This is attaching the slider crank directly to the arm</h5>
                 <iframe width="600" height="350" src="https://youtube.com/embed/UrYQwplbOQ8?feature=share"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -108,7 +142,7 @@
                 </iframe>
             </div>
             <div class="column centre-align">
-                <h4>This is attaching the slider crank to a string which is attached to the arm</h4>
+                <h5>This is attaching the slider crank to a string which is attached to the arm</h5>
                 <iframe width="600" height="350" src="https://youtube.com/embed/fcBgnU5F3i0?feature=share"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -118,13 +152,13 @@
         </div>
 
 
-        <h3>Eventually, I realized that it would be easier to control the figure by giving it 'muscles' rather than
-            controlling it like a puppet. This resulted in versions like the following.</h3>
+        <h4>Eventually, I realized that it would be easier to control the figure by giving it 'muscles' rather than
+            controlling it like a puppet. This resulted in versions like the following.</h4>
 
         <div class="servo-as-muscles row centre-align">
             <div class="column centre-align">
-                <h4>Attaching the servos directly to the arms and holding them so that the arms move, and not the servos
-                    themselves</h4>
+                <h5>Attaching the servos directly to the arms and holding them so that the arms move, and not the servos
+                    themselves</h5>
                 <iframe width="600" height="350" src="https://youtube.com/embed/8SLJqo7Zgsw?feature=share"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -132,8 +166,8 @@
                 </iframe>
             </div>
             <div class="column centre-align">
-                <h4>Attaching one of the arms to slider crank I built before with the hope of attaching it to a stable
-                    base</h4>
+                <h5>Attaching one of the arms to slider crank I built before with the hope of attaching it to a stable
+                    base</h5>
                 <iframe width="600" height="350" src="https://youtube.com/embed/4J7Nboh4FUk?feature=share"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -142,21 +176,34 @@
             </div>
 
         </div>
-        <h3>One of the major issues I recognized early on and is extremely apparent with the above approaches is that
-            the servos themselves are moving, and so the surface they are mounted to also must allow them to move. </h3>
-        <h4>This was a difficult problem to solve, however, I believe I found a good solution which you will see below.
-        </h4>
+        <h4>One of the major issues I recognized early on and is extremely apparent with the above approaches is that
+            the servos themselves are moving, and so the surface they are mounted to also must allow them to move. </h4>
+        <h5>This was a difficult problem to solve, however, I believe I found a good solution which you will see below.
+        </h5>
 
-        <h1 id="Final-Video-Example">Final Video Example</h1>
+        <div id="Final-Video-Example" class="blank-text-for-height"></div>
+        <div class="title final-video-example-title">
+            <h1>Final Video Example</h1>
+        </div>
 
-        <h3>I realized that the servos exert equal forces (for the most part) in perpendicular directions, if I mount
-            them to the slider crank (which will allow them to move independently), their own forces will cancel out and
-            stay mounted to the figure</h3>
 
-        <iframe width="600" height="350" src="https://youtube.com/embed/N6pSgM-Tjns?feature=share" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+        <div class="row final-video-example">
+            <div class="column">
+                <h4>I realized that the servos exert equal forces (for the most part) in perpendicular directions</h4>
+                <h4>I mount them to the slider crank (which will allow them to move independently), their own forces
+                    will cancel
+                    out and
+                    stay mounted to the figure</h4>
+            </div>
+            <div class="column">
+                <div class="blank-text-for-height"></div>
+                <iframe width="600px" height="500px" src="https://youtube.com/embed/N6pSgM-Tjns?feature=share"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
 
 
 
