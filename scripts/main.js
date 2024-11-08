@@ -1,5 +1,5 @@
 const movableText = document.getElementById("Moveable-Text");
-const container = document.getElementById("Lightsabre-Piano");
+const container = document.getElementById("Lightsabre-Piano-Description");
 
 let lastY = 0;
 
