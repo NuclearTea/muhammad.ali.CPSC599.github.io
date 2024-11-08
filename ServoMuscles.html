@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="styles/pallette.css" />
     <link rel="stylesheet" href="styles/navigation.css" />
     <link rel="stylesheet" href="styles/ServoMuscles.css" />
+    <link rel="stylesheet" href="styles/prism.css" />
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=trending_flat" />
 
     <script src="scripts/ServoMuscles.js" defer></script>
-
+    <script src="scripts/prism.js"></script>
     <title>Making Muscles with Servos</title>
 </head>
 
@@ -125,8 +127,7 @@
             <div class="column centre-align">
                 <h4>A video showing my initial slider crank</h4>
                 <iframe width="600" height="350" src="https://youtube.com/embed/94n-kBzwXVw?feature=share"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
                     allowfullscreen>
                 </iframe>
 
@@ -142,16 +143,14 @@
             <div class="column centre-align">
                 <h5>This is attaching the slider crank directly to the arm</h5>
                 <iframe width="600" height="350" src="https://youtube.com/embed/UrYQwplbOQ8?feature=share"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
                     allowfullscreen>
                 </iframe>
             </div>
             <div class="column centre-align">
                 <h5>This is attaching the slider crank to a string which is attached to the arm</h5>
                 <iframe width="600" height="350" src="https://youtube.com/embed/fcBgnU5F3i0?feature=share"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
                     allowfullscreen>
                 </iframe>
             </div>
@@ -166,8 +165,7 @@
                 <h5>Attaching the servos directly to the arms and holding them so that the arms move, and not the servos
                     themselves</h5>
                 <iframe width="600" height="350" src="https://youtube.com/embed/8SLJqo7Zgsw?feature=share"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
                     allowfullscreen>
                 </iframe>
             </div>
@@ -175,8 +173,7 @@
                 <h5>Attaching one of the arms to slider crank I built before with the hope of attaching it to a stable
                     base</h5>
                 <iframe width="600" height="350" src="https://youtube.com/embed/4J7Nboh4FUk?feature=share"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
                     allowfullscreen>
                 </iframe>
             </div>
@@ -192,19 +189,49 @@
             <h1>Circuit Diagram & Code</h1>
         </div>
 
-        <div class="row circuit-diagram-code">
-            <div class="column">
-                <img src="assets/Assignment 3/A3 Circuit Diagram.jpg" alt="Circuit Diagram" width="100%"></img>
+        <div class="row circuit-diagram">
+            <div class="column centre-align">
 
+                <img src="assets/Assignment 3/A3 Circuit Diagram.jpg" alt="Circuit Diagram" width="50%"></img>
+                <a href="assets/Assignment 3/A3 Circuit Diagram.jpg" download="ServoMusclesCircuitDiagram.jpg">Click
+                    here to
+                    download the
+                    schematic</a>
             </div>
-            <div class="column">
-                <div class="code-container">
-                    <a href="assets/Assignment 1/Code/CodeA1.zip" download="CodeA1.zip">Click here to download the
-                        code</a>
-                </div>
-            </div>
-            <div class="column"></div>
 
+            <div class="column">
+                <h3>Parts Needed</h3>
+                <ul>
+                    <li>Arduino and cable</li>
+                    <li>2 Servos (I use the MS18)</li>
+                    <li>Wires</li>
+                    <li>Breadboard</li>
+                    <li>(Optional) Power Supply</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <h2>Code</h2>
+
+        <div class="row code">
+            <div class="column">
+                <pre><code class="language-cpp" id="code-container"></code></pre>
+                <a href="assets/Assignment 3/Code/ServoMuscles.zip" download="ServoMuscles.zip">Click here to download
+                    the code</a>
+            </div>
+
+            <div class="column ">
+                <h3>Code Description</h3>
+                <p>I use the existing Servo API from Arduino and create 2 instances, initializing their angles to 60
+                    degrees.</p>
+                <p>The first servo is on pin 8, and the second on pin 9.</p>
+                <p>The rotateServo function is used to rotate both servos at the same time. Their angles are just 180
+                    degrees off due to their positioning.</p>
+                <p>The rotateServo function takes in a delay for lifting the arms, and a delay for dropping the arms.
+                    The one for lifting the arms is calculated by the mapDelay function which makes the speed slower
+                    based on the current rep, and RPE (Rating of Perceived Exertion) of the current set. </p>
+            </div>
         </div>
 
 
@@ -228,8 +255,7 @@
             </div>
             <div class="column">
                 <iframe width="100%" height="100%" src="https://youtube.com/embed/N6pSgM-Tjns?feature=share"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
                     allowfullscreen>
                 </iframe>
             </div>
