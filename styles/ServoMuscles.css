@@ -95,6 +95,17 @@
     background-color: var(--Pale-Dogwood);
     width: 55%;
   }
+
+  .column:last-child {
+    width: 45%;
+    .column {
+      margin: 1rem;
+    }
+  }
+}
+
+.final-video-example-text {
+  margin: 1rem;
 }
 
 .description-detailed,
