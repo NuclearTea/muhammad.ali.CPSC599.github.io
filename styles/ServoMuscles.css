@@ -104,6 +104,20 @@
   }
 }
 
+.circuit-diagram-code {
+  .column:first-child {
+    width: 25%;
+  }
+
+  .column:nth-child(2) {
+    width: 25%;
+  }
+
+  .column:last-child {
+    width: 50%;
+  }
+}
+
 .final-video-example-text {
   margin: 1rem;
 }
