@@ -117,7 +117,6 @@
   .column:first-child {
     font-size: 0.85rem;
     height: 500px;
-    overflow-y: scroll;
     width: 50%;
   }
 
