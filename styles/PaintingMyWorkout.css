@@ -1,0 +1,35 @@
+.PaintingMyWorkout {
+  h1 {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 200;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+
+  h5 {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+}
+
+.description-options {
+  padding: 0.5rem 1rem; /* Add padding for better appearance */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.description-options h4 {
+  font-weight: 600;
+}
