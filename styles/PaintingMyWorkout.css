@@ -25,9 +25,18 @@
   }
 }
 
+.Description {
+  width: 100%;
+}
+
+.title {
+  background-color: var(--Arsenic);
+  color: #ffffff;
+  width: 100%;
+}
 .description-options {
-  padding: 0.5rem 1rem; /* Add padding for better appearance */
-  border-radius: 10px; /* Rounded corners */
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .description-options h4 {
