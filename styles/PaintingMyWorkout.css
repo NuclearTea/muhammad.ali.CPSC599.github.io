@@ -77,7 +77,23 @@
   align-items: center;
 }
 
-/* .video-examples .column {
+.code {
+  align-items: flex-start;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  gap: 5rem;
   width: 100%;
-  height: 100%;
-} */
+}
+
+#code-container {
+  display: none;
+}
+
+
+.code .code-description {
+  width: 33%;
+}
+
+.code pre {
+  width: 50%;
+}

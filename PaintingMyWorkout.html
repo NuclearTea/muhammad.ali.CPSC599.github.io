@@ -10,6 +10,12 @@
   <link rel="stylesheet" href="styles/global.css" />
   <link rel="stylesheet" href="styles/navigation.css" />
   <link rel="stylesheet" href="styles/PaintingMyWorkout.css" />
+  <link rel="stylesheet" href="styles/prism.css" />
+
+  <script src="scripts/PaintMyWorkout.js  " defer></script>
+  <script src="scripts/prism.js"></script>
+
+
   <title>Painting My Workout</title>
 </head>
 
@@ -56,7 +62,7 @@
       <div class="row center-align description-options" style="gap: 33%">
         <div class="column centre-align" style="width: 50%">
           <h5>Iteration</h5>
-          <!-- Iterate on a previous assignment (still fulfilling the requirements -->
+          Iterate on a previous assignment (still fulfilling the requirements
           of that assignment) and improve it some way or form.
         </div>
         <div class="column centre-align">
@@ -160,7 +166,18 @@
 
     <section id="Code">
       <h1>Code</h1>
-      The actual code to perform the movements is actually quite similar.
+      <div class="row centre-align code">
+        <div class="column centre-align code-description">
+
+          <h4>The actual code to perform the movements is actually quite similar.</h4>
+          <h5>It reads in 3 bytes from UART. First is the number of sets, second is the number of reps per set, and lastly, the RPE of each set</h5>
+          <h5>This would be transmitted by a python script which had access to the analyzed data.</h5>
+          <h5>The Data Processing Layer will be discussed below</h5>
+        </div>
+        <pre><code class="language-cpp" id="code-container"></code></pre>
+
+
+      </div>
     </section>
   </main>
 </body>
