@@ -1,194 +1,382 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/pallette.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/PaintingMyWorkout.css" />
+    <link rel="stylesheet" href="styles/prism.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="styles/index.css" />
-  <link rel="stylesheet" href="styles/pallette.css" />
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/navigation.css" />
-  <link rel="stylesheet" href="styles/PaintingMyWorkout.css" />
-  <link rel="stylesheet" href="styles/prism.css" />
+    <script src="scripts/PaintMyWorkout.js  " defer></script>
+    <script src="scripts/prism.js"></script>
 
-  <script src="scripts/PaintMyWorkout.js  " defer></script>
-  <script src="scripts/prism.js"></script>
+    <title>Painting My Workout</title>
+  </head>
 
+  <body>
+    <nav id="navigation">
+      <a href="index.html">
+        <h1>Muhammad Ali</h1>
+      </a>
+      <div>
+        <ul class="header-list">
+          <li>
+            <a class="header-list-item" href="#"> Description </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Ideation"> Ideation </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Development">Development </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Video-Example">Video Example </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Schematic">Circuit Schematic </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Code">Code </a>
+          </li>
+          <li>
+            <a class="header-list-item" href="#Data-Processing"
+              >Data Processing
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <title>Painting My Workout</title>
-</head>
-
-<body>
-  <nav id="navigation">
-    <a href="index.html">
-      <h1>Muhammad Ali</h1>
-    </a>
-    <div>
-      <ul class="header-list">
-        <li>
-          <a class="header-list-item" href="#"> Description </a>
-        </li>
-        <li>
-          <a class="header-list-item" href="#Ideation"> Ideation </a>
-        </li>
-        <li>
-          <a class="header-list-item" href="#Development">Development </a>
-        </li>
-        <li>
-          <a class="header-list-item" href="#Video-Example">Video Example </a>
-        </li>
-        <li>
-          <a class="header-list-item" href="#Schematic">Circuit Schematic </a>
-        </li>
-        <li>
-          <a class="header-list-item" href="#Code">Code </a>
-        </li>
-        <li>
-          <a class="header-list-item" href="#Data-Processing">Data Processing </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="PaintingMyWorkout column centre-align">
-    <div class="title">
-      <h1>Painting My Workout</h1>
-    </div>
-
-    <section id="Description" class="Description centre-align">
-      <div class="">
-        <h2>Description</h2>
+    <main class="PaintingMyWorkout column centre-align">
+      <div class="title">
+        <h1>Painting My Workout</h1>
       </div>
 
-      <h4>We were tasked with either: Integration or Iteration.</h4>
-      <div class="row center-align description-options" style="gap: 33%">
-        <div class="column centre-align" style="width: 50%">
-          <h5>Iteration</h5>
-          Iterate on a previous assignment (still fulfilling the requirements
-          of that assignment) and improve it some way or form.
+      <section id="Description" class="Description centre-align">
+        <div class="">
+          <h2>Description</h2>
         </div>
-        <div class="column centre-align">
-          <h5>Integration</h5>
-          Create an interactive wearable fashion accessory with both sensing
-          and physical output that communicates an aesthetic of
-          <strong>joy</strong>.
-        </div>
-      </div>
-    </section>
 
-    <section id="Ideation" class="Ideation">
-      <h1>Ideation</h1>
-      <div class="column centre-align Ideation-Ideas">
-        <div class="row ">
-          <div class="text-content">
-            <h2>Original Design</h2>
-            <h5>
-              This shows my ServoMuscles project which depicts a wooden figure with attached servos raising and lowering
-              its arms
-            </h5>
+        <h4>We were tasked with either: Integration or Iteration.</h4>
+        <div class="row center-align description-options" style="gap: 33%">
+          <div class="column centre-align" style="width: 50%">
+            <h5>Iteration</h5>
+            Iterate on a previous assignment (still fulfilling the requirements
+            of that assignment) and improve it some way or form.
           </div>
-          <img src="assets/Assignment 4/Current Sketch.png">
+          <div class="column centre-align">
+            <h5>Integration</h5>
+            Create an interactive wearable fashion accessory with both sensing
+            and physical output that communicates an aesthetic of
+            <strong>joy</strong>.
+          </div>
         </div>
-        <div class="row ">
+      </section>
 
-          <div class="text-content">
-            <h2>Iteration: Complex Design</h2>
-            <h5>This depicts a wooden figure which has pens attached to its arms going along the length of the arm.
+      <section id="Ideation" class="Ideation">
+        <h1>Ideation</h1>
+        <div class="column centre-align Ideation-Ideas">
+          <div class="row">
+            <div class="text-content">
+              <h2>Original Design</h2>
+              <h5>
+                This shows my ServoMuscles project which depicts a wooden figure
+                with attached servos raising and lowering its arms
+              </h5>
+            </div>
+            <img src="assets/Assignment 4/Current Sketch.png" />
+          </div>
+          <div class="row">
+            <div class="text-content">
+              <h2>Iteration: Complex Design</h2>
+              <h5>
+                This depicts a wooden figure which has pens attached to its arms
+                going along the length of the arm.
+              </h5>
+              <h5>
+                These are "Water Pens" which use water to dye a canvas. The
+                water is supposed to by symbolic of sweat in this as it
+                represents my workout.
+              </h5>
+              <h5>
+                There is a servo at the bottom which would hold different
+                colours which the pen could absorb on the bottom of its range
+                and then paint as its arms rise. These colours would represent
+                the difficult of the rep. Once a specific range is reached, it
+                would change colour.
+              </h5>
+            </div>
+            <img src="assets/Assignment 4/Initial Sketch 1.png" width="50%" />
+          </div>
+          <div class="row">
+            <div class="text-content">
+              <h2>Iteration: Simple Design</h2>
+              <h5>
+                This describes a wooden figure which has water pens attached
+                along the arms with the canvas in-front of it.
+              </h5>
+            </div>
+            <img src="assets/Assignment 4/Initial Sketch 2.png" width="50%" />
+          </div>
+        </div>
+      </section>
+      <section id="Development" class="column center-align">
+        <h1>Development</h1>
+        <h4>
+          There were many different approaches I took as it turned out that my
+          sketches did not account for the physical changes in the system.
+        </h4>
+        <h2>Problems</h2>
+        <h4>
+          I did not account for the change in weight distribution and how adding
+          things to the arms would change the requirements of the support
+          structure (popsicle sticks behind the wooden figure)
+        </h4>
+        <h4>
+          I had and tried many ideas such as adding string support and rubber
+          bands however, they both had their own issues and were ineffective
+        </h4>
+
+        <h4>
+          Additionally, water pens did not seem to be a good fit as they often
+          required being squeezed in order to actually make a mark on the canvas
+          which would not work for this use case.
+        </h4>
+      </section>
+      <section id="Video-Example">
+        <h1>Video Examples</h1>
+        <div class="row video-examples">
+          <div class="column">
+            <h3>Example 1</h3>
+            <iframe
+              height="550px"
+              width="550px"
+              src="https://youtube.com/embed/hw4k1ruoIvM?feature=share"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+          <div class="column">
+            <h3>Example 2</h3>
+            <iframe
+              height="550px"
+              width="550px"
+              src="https://youtube.com/embed/5oz0wld914k?feature=share"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+          <div class="column">
+            <h3>Example 3</h3>
+            <iframe
+              height="550px"
+              width="550px"
+              src="https://youtube.com/embed/agW53ZAf3iU?feature=share"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+        <h2>
+          The above examples show how different staring positions and different
+          canvases affect the outcome of the painting
+        </h2>
+      </section>
+      <section id="Schematic">
+        <h1>Circuit Schematic</h1>
+        <h4>
+          The circuit schematic is identical as I didn't change anything
+          electrically from ServoMuscles.
+        </h4>
+        <img width="50%" src="assets/Assignment 3/A3 Circuit Diagram.jpg" />
+      </section>
+
+      <section id="Code">
+        <h1>Code</h1>
+        <div class="row centre-align code">
+          <div class="column centre-align code-description">
+            <h4>
+              The actual code to perform the movements is actually quite
+              similar.
+            </h4>
+            <h5>
+              It reads in bytes from UART. First is the number of sets, second
+              is the number of reps per set, and lastly, the RPE of each set.
+              This is further elaborated below in the Data Processing Section
             </h5>
             <h5>
-              These are "Water Pens" which use water to dye a canvas. The water is supposed to by symbolic of sweat in
-              this as it represents my workout.
-
+              This would be transmitted by a python script which had access to
+              the analyzed data.
+            </h5>
+            <h5>The Data Processing Layer will be discussed below</h5>
+          </div>
+          <pre><code class="language-cpp" id="code-container"></code></pre>
+        </div>
+      </section>
+      <section id="Data-Processing column centre-align">
+        <h1>Data Processing</h1>
+        <div class="data-processing-intro row">
+          <div class="column">
+            <h3>My Data</h3>
+            <h5>
+              This table represents 1 weeks worth of training that I would do
+              stored in a google sheet.
             </h5>
             <h5>
-              There is a servo at the bottom which would hold different colours which the pen could absorb on the bottom
-              of its range and then paint as its arms rise. These colours would represent the difficult of the rep. Once
-              a specific range is reached, it would change colour.
+              In 1 sheet, there would be 4 of these tables, represent 4 weeks (1
+              Month) worth of training
+            </h5>
+            <a href="https://observablehq.com/d/bf7637e56422839a"
+              >For a proper analysis and more details, take a look at this
+              link!</a
+            >
+          </div>
+          <div class="column">
+            <img
+              width="80%"
+              src="assets/Assignment 4/Table1.png"
+              alt="Example of my table data"
+            />
+          </div>
+        </div>
+        <h2>Step 1: Downloading The Sheet as CSV</h2>
+        <h4>This will give a csv looking like the following:</h4>
+        <pre><code>,Week 1,Excersise,Weight,Sets,Reps,Notes,,,
+,Day 1: Squat,Squat,245,3,4,"4 rpe 8, 4 rpe 8, 4 rpe 9.5, coming from vacation",,,
+,,Barbell Shrugs (normal grip),275,4,8,"8 rpe 7.5, 8 rpe 8, 8 rpe 8, 8 rpe 10",,,
+,,dumbell curl,25,3,10,"10 rpe 9, 8 rpe 10,  6 rpe 9",,,
+,,hip abductions ,160,3,12,with eccentric ,,,
+,,,,,,,,,
+,,,,,,,,,
+,Day 2: OHP,OHP,115,3,9,"9 rpe 8,  9 rpe 8",,,
+,,CG Bench Press,155,3,5,"5 rpe 5, 5 rpe 5",,,
+,,chinups,BW,4,Amrap,"3,2,2",,,
+,,barbell rows with straps,135,3,10,"10 rpe 8, 10 rpe 10",,,
+,,Cable Curl,37.5,2,8,"11 rpe 9.5, 10 rpe 9.5",,,
+,,Cable pushdown,62.5,2,8,"7 rpe 10 (67.5), 7 rpe 9",,,
+,,,,,,,,,
+,,,,,,,,,
+</code></pre>
+
+        <h2>Step 2: First Mapping</h2>
+
+        <h4>
+          This will transfrom the starting point to something like the
+          following:
+        </h4>
+        <pre><code>
+Week,Day,Exercise,Weight,Sets,Reps,Notes
+Week 1,,Excersise,Weight,Sets,Reps,Notes
+Week 1,Day 1: Squat,Squat,245,3,4,"4 rpe 8, 4 rpe 8, 4 rpe 9.5, coming from vacation"
+Week 1,Day 1: Squat,Barbell Shrugs (normal grip),275,4,8,"8 rpe 7.5, 8 rpe 8, 8 rpe 8, 8 rpe 10"
+Week 1,Day 1: Squat,dumbell curl,25,3,10,"10 rpe 9, 8 rpe 10,  6 rpe 9"
+Week 1,Day 1: Squat,hip abductions ,160,3,12,with eccentric 
+Week 1,Day 2: OHP,OHP,115,3,9,"9 rpe 8,  9 rpe 8"
+Week 1,Day 2: OHP,CG Bench Press,155,3,5,"5 rpe 5, 5 rpe 5"
+Week 1,Day 2: OHP,chinups,BW,4,Amrap,"3,2,2"
+
+        </code></pre>
+        <h2>Step 3: Second Mapping</h2>
+
+        <h4>
+          This will transfrom the first mapping to something like the following:
+        </h4>
+        <pre><code>
+Week,Day,Exercise,Set,Weight,Reps,RPE,Notes
+Week 1,Day 1: Squat,Squat,1,245,4,8.0,"4 rpe 8, 4 rpe 8, 4 rpe 9.5, coming from vacation"
+Week 1,Day 1: Squat,Squat,2,245,4,8.0,"4 rpe 8, 4 rpe 8, 4 rpe 9.5, coming from vacation"
+Week 1,Day 1: Squat,Squat,3,245,4,9.5,"4 rpe 8, 4 rpe 8, 4 rpe 9.5, coming from vacation"
+        </code></pre>
+        <h4>
+          When viewed using a program like excel, google sheets (or libre calc):
+        </h4>
+        <img
+          src="assets/Assignment 4/csv_as_table.png"
+          alt="csv as table in libre calc"
+        />
+        <h4>
+          <strong>Note: </strong>There is quite a bit of logic, text mapping and
+          validation that is ocurring in these mapping layers.
+        </h4>
+        <h4>
+          Additionally, I manually go in and validate the rows to ensure that
+          there isn't wierd behaviour and outlier data
+        </h4>
+        <h3>Transfer Data over UART</h3>
+        <div class="row">
+          <pre style="width: 50%"><code class="language-python">
+
+import csv
+import serial
+
+csv_file_path = "workout_data.csv"
+serial_port = "/dev/ttyACM0" # I use Linux, this will be COMX if on windows
+baud_rate = 9600
+
+def send_lateral_raise_data():
+    lateral_raise_data = []
+    with open(csv_file_path, mode="r") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row["Exercise"].strip().lower() == "lateral raise":
+                lateral_raise_data.append({
+                    "Set": int(row["Set"]),
+                    "Reps": int(row["Reps"]),
+                    "RPE": int(row["RPE"])
+                })
+
+    if not lateral_raise_data:
+        print("No lateral raise data found in the CSV.")
+        return
+
+    total_sets = len(lateral_raise_data)
+    reps = [entry["Reps"] for entry in lateral_raise_data]
+    rpe = [entry["RPE"] for entry in lateral_raise_data]
+
+    data = [total_sets] + reps + rpe
+
+    try:
+        with serial.Serial(serial_port, baud_rate, timeout=1) as ser:
+            ser.write(bytearray(data))
+            print(f"Data sent to Arduino: {data}")
+    except serial.SerialException as e:
+        print(f"Error communicating with the serial port: {e}")
+
+if __name__ == "__main__":
+    send_lateral_raise_data()
+
+        </code></pre>
+          <div class="column centre-align" style="width: 60%">
+            <h5>
+              This descibes the python code that reads the data from the parsed
+              and cleanded csv described above and transmits it to the arduino
+              code provided above which listens for this protocol.
             </h5>
 
-
+            <h5>
+              It parses the data, finds the first instance of lateral raises and
+              transmits the data in the following protocol:
+            </h5>
+            <h5>Byte 1: Number Of Sets</h5>
+            <h5>
+              Bytes 2-n: number of reps for each set described before. Ex: If
+              the first byte was 3, then this would be bytes 2,3,4
+            </h5>
+            <h5>Bytes n to end: RPE for each set</h5>
           </div>
-          <img src="assets/Assignment 4/Initial Sketch 1.png" width="50%">
-
         </div>
-        <div class="row ">
-          <div class="text-content">
-            <h2>Iteration: Simple Design</h2>
-            <h5>This describes a wooden figure which has water pens attached along the arms with the canvas in-front of
-              it.</h5>
-          </div>
-          <img src="assets/Assignment 4/Initial Sketch 2.png" width="50%">
-        </div>
-      </div>
-    </section>
-    <section id="Development" class="column center-align">
-      <h1>Development</h1>
-      <h4>There were many different approaches I took as it turned out that my sketches did not account for the physical
-        changes in the system.</h4>
-      <h2>Problems</h2>
-      <h4>I did not account for the change in weight distribution and how adding things to the arms would change the
-        requirements of the support structure (popsicle sticks behind the wooden figure)</h4>
-      <h4>I had and tried many ideas such as adding string support and rubber bands however, they both had their own
-        issues and were ineffective </h4>
-
-      <h4>Additionally, water pens did not seem to be a good fit as they often required being squeezed in order to
-        actually make a mark on the canvas which would not work for this use case.</h4>
-    </section>
-    <section id="Video-Example">
-      <h1>Video Examples</h1>
-      <div class="row video-examples">
-        <div class="column">
-          <h3>Example 1</h3>
-          <iframe height="550px" width="550px" src="https://youtube.com/embed/hw4k1ruoIvM?feature=share" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
-          </iframe>
-        </div>
-        <div class="column">
-          <h3>Example 2</h3>
-          <iframe height="550px" width="550px" src="https://youtube.com/embed/5oz0wld914k?feature=share" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
-          </iframe>
-        </div>
-        <div class="column">
-          <h3>Example 3</h3>
-          <iframe height="550px" width="550px" src="https://youtube.com/embed/agW53ZAf3iU?feature=share" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-      <h2>The above examples show how different staring positions and different canvases affect the outcome of the
-        painting</h2>
-    </section>
-    <section id="Schematic">
-      <h1>Circuit Schematic</h1>
-      <h4>The circuit schematic is identical as I didn't change anything electrically from ServoMuscles.</h4>
-      <img width="50%" src="assets/Assignment 3/A3 Circuit Diagram.jpg">
-
-    </section>
-
-    <section id="Code">
-      <h1>Code</h1>
-      <div class="row centre-align code">
-        <div class="column centre-align code-description">
-
-          <h4>The actual code to perform the movements is actually quite similar.</h4>
-          <h5>It reads in 3 bytes from UART. First is the number of sets, second is the number of reps per set, and lastly, the RPE of each set</h5>
-          <h5>This would be transmitted by a python script which had access to the analyzed data.</h5>
-          <h5>The Data Processing Layer will be discussed below</h5>
-        </div>
-        <pre><code class="language-cpp" id="code-container"></code></pre>
-
-
-      </div>
-    </section>
-    <section id="Data-Processing">
-      <h1>Data Processing</h1>
-      <div class="data-processing-intro row">
-        <h3>My Data</h3>
-      </div>
-    </section>
-  </main>
-</body>
-
+      </section>
+    </main>
+  </body>
 </html>
+
